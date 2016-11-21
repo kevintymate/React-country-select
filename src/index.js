@@ -5,7 +5,7 @@ import "react-select/dist/react-select.css"
 import {countries} from './data'
 
 export default class ReactCountrySelect extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ export default class ReactCountrySelect extends Component {
                 width: 30,
                 height: 15
             },
-            tag: null
+            tag: props.value || null,
         };
         this.logChange = this.logChange.bind(this);
         this.CountryRenderValue = this.CountryRenderValue.bind(this);
@@ -58,7 +58,7 @@ export default class ReactCountrySelect extends Component {
     render() {
         return (
             <div>
-                <Select placeholder="Search country.."
+                <Select placeholder={this.props.placeholder || "Search country.."}
                 value={this.state.tag}
                 options={countries}
                 optionRenderer={this.CountryOptionRenderer}

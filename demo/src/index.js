@@ -19,10 +19,10 @@ export default class Demo extends Component {
       <br></br>
       <div>
       <h4><i>Single select</i></h4>
-      <SelectComponent multi={false} flagImagePath="./assets/" onSelect={this.onSelect}/>
+      <SelectComponent multi={false} flagImagePath="./assets/" onSelect={this.onSelect} value='FR' placeholder='Choisissez un pays'/>
       <br></br>
       <h4><i>Multiple select</i></h4>
-      <SelectComponent multi={true} flagImagePath="./assets/" onSelect={this.onSelect}/>
+      <SelectComponent multi={true} flagImagePath="./assets/" onSelect={this.onSelect} placeholder='Choisissez un pays'/>
       </div>
     </div>
   }

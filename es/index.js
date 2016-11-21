@@ -23,7 +23,7 @@ var ReactCountrySelect = function (_Component) {
                 width: 30,
                 height: 15
             },
-            tag: null
+            tag: props.value || null
         };
         _this.logChange = _this.logChange.bind(_this);
         _this.CountryRenderValue = _this.CountryRenderValue.bind(_this);
@@ -74,7 +74,7 @@ var ReactCountrySelect = function (_Component) {
         return React.createElement(
             'div',
             null,
-            React.createElement(Select, { placeholder: 'Search country..',
+            React.createElement(Select, { placeholder: this.props.placeholder || "Search country..",
                 value: this.state.tag,
                 options: countries,
                 optionRenderer: this.CountryOptionRenderer,

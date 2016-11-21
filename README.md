@@ -48,6 +48,8 @@ onSelect={function which will return options selected}
 
 multi={false} //for single selection
 multi={true} //for multiple selection
+value='FR' // Set a preselected value
+placeholder='My Placeholder' // Set a placeholder. By default : Search country..
 
 By default it is single selection mode
 ```
